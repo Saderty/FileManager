@@ -16,7 +16,7 @@ public class Compressor {
 
     static void compress(File sourcePath, File targetPath, String compression) throws IOException {
         if (!compression.equals(COMPRESSION_LZOP)) {
-            targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
+            //targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
             if (compression.equals(COMPRESSION_7Z)) {
                 Runtime.getRuntime().exec(archive7z + " a -t7z -ssw -mx9 -r0 " + targetPath + ".7z " + sourcePath);
             }
@@ -46,56 +46,57 @@ public class Compressor {
         if (!compression.equals(COMPRESSION_LZOP)) {
             targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
             if (compression.equals(COMPRESSION_7Z)) {
-                Runtime.getRuntime().exec(archive7z + " x -t7z -ssw " + sourcePath + ".7z -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -t7z -ssw " + sourcePath + " -o" + targetPath);
             }
             if (compression.equals(COMPRESSION_BZ2)) {
-                Runtime.getRuntime().exec(archive7z + " x -tbzip2 -ssw " + sourcePath + ".bz2 -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -tbzip2 -ssw " + sourcePath + " -o" + targetPath);
             }
             if (compression.equals(COMPRESSION_GZ)) {
-                Runtime.getRuntime().exec(archive7z + " x -tgzip -ssw " + sourcePath + ".gz -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -tgzip -ssw " + sourcePath + " -o" + targetPath);
             }
             if (compression.equals(COMPRESSION_ZIP)) {
-                Runtime.getRuntime().exec(archive7z + " x -tzip -ssw " + sourcePath + ".zip -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -tzip -ssw " + sourcePath + " -o" + targetPath);
             }
             if (compression.equals(COMPRESSION_TAR)) {
-                Runtime.getRuntime().exec(archive7z + " x -ttar -ssw " + sourcePath + ".tar -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -ttar -ssw " + sourcePath + " -o" + targetPath);
             }
         }
         if (compression.equals(COMPRESSION_LZOP)) {
-            Runtime.getRuntime().exec(archiveLzop + " -d " + targetPath + ".lzop -o " + sourcePath);
+            Runtime.getRuntime().exec(archiveLzop + " -d " + targetPath + " -o " + sourcePath);
         }
-    }
-
-    static void deCompress(File sourcePath, String compression) throws IOException {
-        deCompress(sourcePath, sourcePath, compression);
     }
 
     static void deCompress(File sourcePath) throws IOException {
-        String s = sourcePath.toString().substring(sourcePath.toString().lastIndexOf(".\\"), sourcePath.toString().length());
+        deCompress(sourcePath, sourcePath);
+    }
+
+    static void deCompress(File sourcePath, File targetPath) throws IOException {
+        String q = sourcePath.toString();
+        String s = q.substring(q.lastIndexOf('.') + 1, q.length());
         switch (s) {
             case COMPRESSION_7Z:
-                deCompress(sourcePath, sourcePath, COMPRESSION_7Z);
+                deCompress(sourcePath, targetPath, COMPRESSION_7Z);
                 break;
             case COMPRESSION_BZ2:
-                deCompress(sourcePath, sourcePath, COMPRESSION_BZ2);
+                deCompress(sourcePath, targetPath, COMPRESSION_BZ2);
                 break;
             case COMPRESSION_GZ:
-                deCompress(sourcePath, sourcePath, COMPRESSION_GZ);
+                deCompress(sourcePath, targetPath, COMPRESSION_GZ);
                 break;
             case COMPRESSION_ZIP:
-                deCompress(sourcePath, sourcePath, COMPRESSION_ZIP);
+                deCompress(sourcePath, targetPath, COMPRESSION_ZIP);
                 break;
             case COMPRESSION_TAR:
-                deCompress(sourcePath, sourcePath, COMPRESSION_TAR);
+                deCompress(sourcePath, targetPath, COMPRESSION_TAR);
                 break;
             case COMPRESSION_LZOP:
-                deCompress(sourcePath, sourcePath, COMPRESSION_LZOP);
+                deCompress(sourcePath, targetPath, COMPRESSION_LZOP);
                 break;
         }
     }
 
-    public static void main(String[] args) {
-        File file = new File("F:\\BULAT\\_TEST\\install.exe");
+    public static void main(String[] args) throws IOException {
+        File file = new File("F:\\BULAT\\_TEST\\install.exe.gz");
 
         /**
          IF NOT LZOP
@@ -105,5 +106,7 @@ public class Compressor {
          IF LZOP
          deCompress(file, file, COMPRESSION_LZOP);
          */
+
+        deCompress(file);
     }
 }
