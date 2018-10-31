@@ -1,3 +1,5 @@
+package FileManager;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -7,18 +9,6 @@ import static java.nio.file.FileVisitResult.CONTINUE;
 import static java.nio.file.FileVisitResult.TERMINATE;
 
 public class FileManager {
-    private static File mainFile = new File("F:\\BULAT\\JAVA Project\\");
-
-    private static void fileView() throws IOException {
-        String[] entries = mainFile.list();
-
-        for (String entry : entries) {
-            System.out.println(entry);
-            //System.out.println( new File(mainFile+"\\"+entry+"\\Debug\\").delete());
-            System.out.println();
-        }
-    }
-
     private static boolean moveFile(String sourcePath, String targetPath) {
         boolean fileMoved = true;
 
