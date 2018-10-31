@@ -7,18 +7,17 @@ import java.util.Arrays;
 import static FileManager.Compressor.*;
 
 public class TitaniumHelper {
-    public static void main(String[] args) throws IOException {
-        String mainFile = "F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TB\\qq\\";
+    public static void main(String[] args) throws IOException, InterruptedException {
+        File sourceFile = new File("F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TB\\");
+        File targetFile = new File("F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TBGZ\\");
 
-    /*    for (int i = 0; i < mainFile.list().length; i++) {
-            File file = new File(mainFile + "\\" + mainFile.list()[i]);
-            if (isArchive(file)) {
-                deCompress(file);
-                compress(file, COMPRESSION_GZ);
+        //ONLY AT ADD CALLBACK
+        for (int i = 0; i < sourceFile.list().length; i++) {
+            File file = new File(sourceFile + "\\" + sourceFile.list()[i]);
+            String s = file.toString().substring(file.toString().lastIndexOf('.') + 1, file.toString().length());
+            if (s.equals(COMPRESSION_GZ)) {
+                deCompress(file, new File(targetFile + "\\" + sourceFile.list()[i]));
             }
-        }*/
-        mainFile += "aa.tar";
-        //deCompress(new File(mainFile));
-       deCompress(new File(mainFile));
+        }
     }
 }
