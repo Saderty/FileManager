@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c56d822-5b63-4df7-947b-90c952794438" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FileManager/FileManager/TitaniumHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileManager/FileManager/TitaniumHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileManager/Compressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/Compressor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +34,11 @@
       <file leaf-file-name="TitaniumHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="272">
+              <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,8 +46,8 @@
       <file leaf-file-name="Compressor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
+            <state relative-caret-position="526">
+              <caret line="64" column="110" selection-start-line="64" selection-start-column="110" selection-end-line="64" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,8 +87,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="684" />
-    <option name="width" value="1243" />
+    <option name="x" value="568" />
+    <option name="width" value="1359" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -136,9 +142,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TitaniumHelper">
     <configuration name="Compressor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileManager.Compressor" />
+      <module name="FileManager" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FileManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TitaniumHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileManager.TitaniumHelper" />
       <module name="FileManager" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -189,8 +206,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Compressor" />
+      <item itemvalue="Application.TitaniumHelper" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TitaniumHelper" />
         <item itemvalue="Application.Compressor" />
       </list>
     </recent_temporary>
@@ -205,15 +227,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541004442244</updated>
-      <workItem from="1541004443728" duration="7026000" />
+      <workItem from="1541004443728" duration="11153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7026000" />
+    <option name="totallyTimeSpent" value="11153000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="684" y="0" width="1243" height="1047" extended-state="0" />
+    <frame x="568" y="0" width="1359" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -230,7 +252,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19722901" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14966492" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -254,13 +276,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -273,10 +288,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="98" column="65" selection-start-line="98" selection-start-column="65" selection-end-line="98" selection-end-column="65" />
+        <state relative-caret-position="526">
+          <caret line="64" column="110" selection-start-line="64" selection-start-column="110" selection-end-line="64" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -16,25 +16,25 @@ public class Compressor {
 
     static void compress(File sourcePath, File targetPath, String compression) throws IOException {
         if (!compression.equals(COMPRESSION_LZOP)) {
-            //targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
+            ///// //targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
             if (compression.equals(COMPRESSION_7Z)) {
-                Runtime.getRuntime().exec(archive7z + " a -t7z -ssw -mx9 -r0 " + targetPath + ".7z " + sourcePath);
+                Runtime.getRuntime().exec(archive7z + " a -t7z -ssw -mx9 -r0 \"" + targetPath + ".7z\" \"" + sourcePath + "\"");
             }
             if (compression.equals(COMPRESSION_BZ2)) {
-                Runtime.getRuntime().exec(archive7z + " a -tbzip2 -ssw -mx9 -r0 " + targetPath + ".bz2 " + sourcePath);
+                Runtime.getRuntime().exec(archive7z + " a -tbzip2 -ssw -mx9 -r0 \"" + targetPath + ".bz2\" \"" + sourcePath + "\"");
             }
             if (compression.equals(COMPRESSION_GZ)) {
-                Runtime.getRuntime().exec(archive7z + " a -tgzip -ssw -mx9 -r0 " + targetPath + ".gz " + sourcePath);
+                Runtime.getRuntime().exec(archive7z + " a -tgzip -ssw -mx9 -r0 \"" + targetPath + ".gz\" \"" + sourcePath + "\"");
             }
             if (compression.equals(COMPRESSION_ZIP)) {
-                Runtime.getRuntime().exec(archive7z + " a -tzip -ssw -mx9 -r0 " + targetPath + ".zip " + sourcePath);
+                Runtime.getRuntime().exec(archive7z + " a -tzip -ssw -mx9 -r0 \"" + targetPath + ".zip\" \"" + sourcePath + "\"");
             }
             if (compression.equals(COMPRESSION_TAR)) {
-                Runtime.getRuntime().exec(archive7z + " a -ttar -ssw -mx9 -r0 " + targetPath + ".tar " + sourcePath);
+                Runtime.getRuntime().exec(archive7z + " a -ttar -ssw -mx9 -r0 \"" + targetPath + ".tar\" \"" + sourcePath + "\"");
             }
         }
         if (compression.equals(COMPRESSION_LZOP)) {
-            Runtime.getRuntime().exec(archiveLzop + " -9 " + targetPath + " -o " + sourcePath + ".lzop");
+            Runtime.getRuntime().exec(archiveLzop + " -9 \"" + targetPath + "\" -o \"" + sourcePath + ".lzop\"");
         }
     }
 
@@ -46,23 +46,24 @@ public class Compressor {
         if (!compression.equals(COMPRESSION_LZOP)) {
             targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
             if (compression.equals(COMPRESSION_7Z)) {
-                Runtime.getRuntime().exec(archive7z + " x -t7z -ssw " + sourcePath + " -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -t7z -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
             }
             if (compression.equals(COMPRESSION_BZ2)) {
-                Runtime.getRuntime().exec(archive7z + " x -tbzip2 -ssw " + sourcePath + " -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -tbzip2 -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
             }
             if (compression.equals(COMPRESSION_GZ)) {
-                Runtime.getRuntime().exec(archive7z + " x -tgzip -ssw " + sourcePath + " -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -tgzip -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
             }
             if (compression.equals(COMPRESSION_ZIP)) {
-                Runtime.getRuntime().exec(archive7z + " x -tzip -ssw " + sourcePath + " -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -tzip -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
             }
             if (compression.equals(COMPRESSION_TAR)) {
-                Runtime.getRuntime().exec(archive7z + " x -ttar -ssw " + sourcePath + " -o" + targetPath);
+                Runtime.getRuntime().exec(archive7z + " x -ttar -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
             }
         }
         if (compression.equals(COMPRESSION_LZOP)) {
-            Runtime.getRuntime().exec(archiveLzop + " -d " + targetPath + " -o " + sourcePath);
+            sourcePath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf('.')));
+            Runtime.getRuntime().exec(archiveLzop + " -d \"" + targetPath + "\" -o \"" + sourcePath + "\"");
         }
     }
 
@@ -93,6 +94,12 @@ public class Compressor {
                 deCompress(sourcePath, targetPath, COMPRESSION_LZOP);
                 break;
         }
+    }
+
+    static boolean isArchive(File file) {
+        String s = file.toString().substring(file.toString().lastIndexOf('.') + 1, file.toString().length());
+        return s.equals(COMPRESSION_7Z) || s.equals(COMPRESSION_BZ2) || s.equals(COMPRESSION_GZ)
+                || s.equals(COMPRESSION_ZIP) || s.equals(COMPRESSION_TAR) || s.equals(COMPRESSION_LZOP);
     }
 
     public static void main(String[] args) throws IOException {
