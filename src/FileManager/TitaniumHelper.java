@@ -6,9 +6,9 @@ import java.io.IOException;
 import static FileManager.Compressor.*;
 
 public class TitaniumHelper {
-    public static void main(String[] args) throws IOException {
-        File sourceFile = new File("F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TB2\\");
-        File targetFile = new File("F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TB3\\");
+    public static void main(String[] args) throws IOException, InterruptedException {
+        File sourceFile = new File("F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TB3\\");
+        File targetFile = new File("F:\\BULAT\\Backup\\Saderty Phone Backup\\SD_Card\\TB2\\");
 
         //ONLY AT ADD CALLBACK
     /*    for (int i = 0; i < sourceFile.list().length; i++) {
@@ -19,7 +19,7 @@ public class TitaniumHelper {
         }
         */
 
-        System.out.println(compressFolder(sourceFile, targetFile, COMPRESSION_BZ2));
-
+       // System.out.println(compressFolder(sourceFile, targetFile, COMPRESSION_GZ));
+        System.out.println(deCompressFolder(sourceFile, targetFile));
     }
 }
