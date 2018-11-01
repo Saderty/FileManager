@@ -2,6 +2,7 @@ package FileManager;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 
 public class Compressor {
     static File archive7z = new File("F:\\Program Files\\7-Zip\\7z.exe");
@@ -42,29 +43,36 @@ public class Compressor {
         compress(sourceFile, sourceFile, compression);
     }
 
-    static void deCompress(File sourcePath, File targetPath, String compression) throws IOException {
-        if (!compression.equals(COMPRESSION_LZOP)) {
-            targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
-            if (compression.equals(COMPRESSION_7Z)) {
-                Runtime.getRuntime().exec(archive7z + " x -t7z -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
-            }
-            if (compression.equals(COMPRESSION_BZ2)) {
-                Runtime.getRuntime().exec(archive7z + " x -tbzip2 -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
-            }
-            if (compression.equals(COMPRESSION_GZ)) {
-                Runtime.getRuntime().exec(archive7z + " x -tgzip -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
-            }
-            if (compression.equals(COMPRESSION_ZIP)) {
-                Runtime.getRuntime().exec(archive7z + " x -tzip -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
-            }
-            if (compression.equals(COMPRESSION_TAR)) {
-                Runtime.getRuntime().exec(archive7z + " x -ttar -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
-            }
+    static boolean deCompress(File sourcePath, File targetPath, String compression) throws IOException {
+        //if (!compression.equals(COMPRESSION_LZOP)) {
+        targetPath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf("\\")));
+        if (compression.equals(COMPRESSION_7Z)) {
+            Runtime.getRuntime().exec(archive7z + " x -t7z -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
+            return true;
         }
+        if (compression.equals(COMPRESSION_BZ2)) {
+            Runtime.getRuntime().exec(archive7z + " x -tbzip2 -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
+            return true;
+        }
+        if (compression.equals(COMPRESSION_GZ)) {
+            Runtime.getRuntime().exec(archive7z + " x -tgzip -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
+            return true;
+        }
+        if (compression.equals(COMPRESSION_ZIP)) {
+            Runtime.getRuntime().exec(archive7z + " x -tzip -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
+            return true;
+        }
+        if (compression.equals(COMPRESSION_TAR)) {
+            Runtime.getRuntime().exec(archive7z + " x -ttar -ssw \"" + sourcePath + "\" -o\"" + targetPath + "\"");
+            return true;
+        }
+        //}
         if (compression.equals(COMPRESSION_LZOP)) {
             sourcePath = new File(targetPath.toString().substring(0, sourcePath.toString().lastIndexOf('.')));
             Runtime.getRuntime().exec(archiveLzop + " -d \"" + targetPath + "\" -o \"" + sourcePath + "\"");
+            return true;
         }
+        return false;
     }
 
     static void deCompress(File sourcePath) throws IOException {
@@ -100,6 +108,24 @@ public class Compressor {
         String s = file.toString().substring(file.toString().lastIndexOf('.') + 1, file.toString().length());
         return s.equals(COMPRESSION_7Z) || s.equals(COMPRESSION_BZ2) || s.equals(COMPRESSION_GZ)
                 || s.equals(COMPRESSION_ZIP) || s.equals(COMPRESSION_TAR) || s.equals(COMPRESSION_LZOP);
+    }
+
+    static boolean isArchive(File file, String compression) {
+        String s = file.toString().substring(file.toString().lastIndexOf('.') + 1, file.toString().length());
+
+        return s.equals(compression);
+    }
+
+    static boolean compressFolder(File sourceFolder, File targetFolder, String compression) throws IOException {
+        if (sourceFolder.isDirectory()) {
+            for (int i = 0; i < sourceFolder.list().length; i++) {
+                compress(new File(sourceFolder + "\\" + sourceFolder.list()[i]),
+                        new File(targetFolder + "\\" + sourceFolder.list()[i]),
+                        compression);
+            }
+            return true;
+        }
+        return false;
     }
 
     public static void main(String[] args) throws IOException {
