@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c56d822-5b63-4df7-947b-90c952794438" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileManager/FileManager/Compressor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileManager/FileManager/Compressor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileManager/FileManager/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileManager/FileManager/FileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileManager/FileManager/TitaniumHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileManager/FileManager/TitaniumHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileManager/Compressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/Compressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileManager/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +18,8 @@
       <file leaf-file-name="TitaniumHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="221">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,8 +30,8 @@
       <file leaf-file-name="Compressor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="66">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,8 +56,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/FileManager.java" />
         <option value="$PROJECT_DIR$/src/FileManager/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/FileManager/Compressor.java" />
         <option value="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" />
+        <option value="$PROJECT_DIR$/src/FileManager/Compressor.java" />
       </list>
     </option>
   </component>
@@ -71,6 +66,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
@@ -85,6 +86,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,8 +110,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -222,11 +223,12 @@
       <workItem from="1541791075166" duration="9683000" />
       <workItem from="1541846542305" duration="6997000" />
       <workItem from="1541886640863" duration="2372000" />
+      <workItem from="1541931730594" duration="3392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48968000" />
+    <option name="totallyTimeSpent" value="52360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="663" y="0" width="1264" height="1047" extended-state="0" />
@@ -239,10 +241,10 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32932693" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32939914" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -270,6 +272,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -392,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="221">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -402,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="66">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
