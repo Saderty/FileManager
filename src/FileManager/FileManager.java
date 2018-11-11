@@ -33,7 +33,7 @@ public class FileManager {
         return fileCreated;
     }
 
-    private static void deleteFileOrFolder(final Path path) throws IOException {
+    static void deleteFileOrFolder(final Path path) throws IOException {
         Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
             @Override
             public FileVisitResult visitFile(final Path file, final BasicFileAttributes attrs)
