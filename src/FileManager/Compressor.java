@@ -32,7 +32,7 @@ class Compressor {
     static boolean Compress(File sourcePath, File targetPath, String compression, boolean delay) throws IOException, InterruptedException {
         if (!isArchive(sourcePath)) {
             if (compression.equals(COMPRESSION_7Z)) {
-                Runtime.getRuntime().exec(archive7z + " a -t7z -ssw -mx9 -mmt1 -r0 \"" + targetPath +
+                Runtime.getRuntime().exec(archive7z + " a -t7z -ssw -mx9 -mmt2 -r0 \"" + targetPath +
                         "\" \"" + sourcePath + "\"");
             }
             if (compression.equals(COMPRESSION_ZIP)) {
@@ -71,32 +71,15 @@ class Compressor {
         if (delay) {
             Thread.sleep(1000);
 
+            long speed = 0;
+
             while (checkArchive()) {
+                System.out.println(targetPath.length() / (1024 * 1024) + " mB   " +
+                        (targetPath.length() - speed) / (1024d * 1024d) + " mB/s");
+                speed = targetPath.length();
                 Thread.sleep(1000);
             }
         }
-
-        /**if (delay != 0) {
-         boolean complete = false;
-         Thread.sleep(delay);
-         long length;
-
-         if (sourcePath.length() < 1024 * 1024) {
-         Thread.sleep(500);
-         return true;
-         }
-
-         long timeDelaySec = sourcePath.length() * 1000 / (1024 * 1024 * 10);
-
-         while (!complete) {
-         length = new File(targetPath + "." + compression).length();
-         Thread.sleep(timeDelaySec);
-         if (new File(targetPath + "." + compression).length() == length) {
-         complete = true;
-         }
-         }
-         Thread.sleep(500);
-         }*/
 
         return true;
     }
@@ -210,19 +193,26 @@ class Compressor {
     }
 
     static boolean rePack(File sourcePath) throws IOException, InterruptedException {
+        System.out.println("FILE : " + sourcePath.getName());
         File tmp = new File(sourcePath.toString().substring(0, sourcePath.toString().lastIndexOf('.')));
         tmp.mkdirs();
         sourcePath.renameTo(new File(tmp + "/" + sourcePath.getName()));
+
         Double sourceFile = (double) new File(tmp + "/" + sourcePath.getName()).length() / 1024 / 1024;
-        System.out.println(sourceFile);
+        System.out.println("START : " + sourceFile);
+
         while (!DeCompress(new File(tmp + "/" + sourcePath.getName()), true)) {
             Thread.sleep(1000);
         }
+
         new File(tmp + "/" + sourcePath.getName()).delete();
-        Compress(new File(tmp + "\\*"), new File(tmp + "\\" + sourcePath.getName()), COMPRESSION_7Z, true);
-        Thread.sleep(1000);
+
+        while (!Compress(new File(tmp + "\\*"), new File(tmp + "\\" + sourcePath.getName()), COMPRESSION_7Z, true)) {
+            Thread.sleep(1000);
+        }
+
         Double targetFile = (double) new File(tmp + "/" + sourcePath.getName()).length() / 1024 / 1024;
-        System.out.println(targetFile);
+        System.out.println("END : " + targetFile);
         new File(tmp + "/" + sourcePath.getName()).renameTo(sourcePath);
         Thread.sleep(1000);
         deleteFileOrFolder(tmp.toPath());

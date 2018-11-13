@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c56d822-5b63-4df7-947b-90c952794438" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FileManager/ProcessUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Arena/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FileManager/FileManager/Compressor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileManager/FileManager/Compressor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FileManager/FileManager/TitaniumHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FileManager/FileManager/TitaniumHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileManager/Compressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/Compressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TitaniumHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TitaniumHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="221">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,8 +32,8 @@
       <file leaf-file-name="Compressor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+            <state relative-caret-position="442">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,12 +44,36 @@
       <file leaf-file-name="ProcessUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileManager/ProcessUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="85">
               <caret line="8" column="31" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#192#193#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Arena/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#942#1089#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="e#2228#2229#0" expanded="true" />
+                <element signature="e#2294#2295#0" expanded="true" />
+                <element signature="e#2090#2091#0" expanded="true" />
+                <element signature="e#2155#2156#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +97,12 @@
         <option value="$PROJECT_DIR$/src/FileManager.java" />
         <option value="$PROJECT_DIR$/src/FileManager/FileManager.java" />
         <option value="$PROJECT_DIR$/src/FileManager/ProcessUtil.java" />
-        <option value="$PROJECT_DIR$/src/FileManager/Compressor.java" />
         <option value="$PROJECT_DIR$/src/FileManager/TitaniumHelper.java" />
+        <option value="$PROJECT_DIR$/src/FileManager/Compressor.java" />
+        <option value="$PROJECT_DIR$/src/Arena/TestFrame.java" />
+        <option value="$PROJECT_DIR$/src/Arena/DynamicShapes.java" />
+        <option value="$PROJECT_DIR$/src/Arena/JavaPaintUI.java" />
+        <option value="$PROJECT_DIR$/src/Arena/Test.java" />
       </list>
     </option>
   </component>
@@ -96,8 +122,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="865" />
-    <option name="width" value="1062" />
+    <option name="x" value="793" />
+    <option name="width" value="1134" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -105,6 +131,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -122,14 +150,18 @@
               <item name="FileManager" type="b2602c69:ProjectViewProjectNode" />
               <item name="FileManager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Arena" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FileManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FileManager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="FileManager" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,14 +183,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TitaniumHelper">
-    <configuration name="Compressor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileManager.Compressor" />
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="DynamicShapes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Arena.DynamicShapes" />
       <module name="FileManager" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="FileManager.*" />
+          <option name="PATTERN" value="Arena.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="JavaPaintUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Arena.JavaPaintUI" />
+      <module name="FileManager" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Arena.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Arena.Test" />
+      <module name="FileManager" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Arena.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TestFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Arena.TestFrame" />
+      <module name="FileManager" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Arena.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -216,13 +281,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Compressor" />
       <item itemvalue="Application.TitaniumHelper" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.TestFrame" />
+      <item itemvalue="Application.DynamicShapes" />
+      <item itemvalue="Application.JavaPaintUI" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.JavaPaintUI" />
+        <item itemvalue="Application.DynamicShapes" />
+        <item itemvalue="Application.TestFrame" />
         <item itemvalue="Application.TitaniumHelper" />
-        <item itemvalue="Application.Compressor" />
       </list>
     </recent_temporary>
   </component>
@@ -243,15 +314,17 @@
       <workItem from="1541846542305" duration="6997000" />
       <workItem from="1541886640863" duration="2372000" />
       <workItem from="1541931730594" duration="3394000" />
-      <workItem from="1542025071019" duration="2310000" />
+      <workItem from="1542025071019" duration="14609000" />
+      <workItem from="1542066128510" duration="5094000" />
+      <workItem from="1542116279514" duration="4157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54672000" />
+    <option name="totallyTimeSpent" value="76222000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="865" y="0" width="1062" height="1047" extended-state="0" />
+    <frame x="793" y="0" width="1134" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -264,11 +337,11 @@
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32932693" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1912046" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17889088" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="SciView" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -292,6 +365,104 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/ProcessUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arena/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#942#1089#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#2155#2156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arena/TestFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#692#1060#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/ProcessUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -446,34 +617,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileManager/ProcessUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileManager/Compressor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+        <state relative-caret-position="442">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileManager/TitaniumHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/FileManager/ProcessUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arena/TestFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="45" column="46" lean-forward="true" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#692#1060#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arena/DynamicShapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#829#1187#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arena/JavaPaintUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-end-line="98" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#876#1023#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2219#2220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../JDK/src.zip!/javax/swing/JPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arena/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#942#1089#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#2155#2156#0" expanded="true" />
           </folding>
         </state>
       </provider>
