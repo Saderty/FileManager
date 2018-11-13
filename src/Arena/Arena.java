@@ -8,10 +8,13 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Test extends JFrame {
-    private int x, y;
+public class Arena extends JFrame {
+    private int x;
+    private int y;
 
-    private Test() {
+    Enemy enemy = new Enemy();
+
+    private Arena() {
         JPanel panel = new Panel();
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
@@ -39,39 +42,71 @@ public class Test extends JFrame {
 
     class Panel extends JPanel {
         Panel() {
-            setPreferredSize(new Dimension(500, 500));
+            setPreferredSize(new Dimension(505, 505));
         }
 
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
+            drawMatrix(g);
+            g.setColor(Color.GREEN);
+            g.fillRect(x, y, 50, 50);
 
-            g.drawRect(x, y, 50 + x, 50 + y);
+            enemy.move();
+            enemy.draw(g);
+
             repaint();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void drawMatrix(Graphics g) {
+        g.setColor(Color.RED);
+        g.drawRect(2, 2, 500, 500);
+
+        for (int i = 0; i < 10; i++) {
+            g.drawLine(0, i * 50, 500, i * 50);
+            g.drawLine(i * 50, 0, i * 50, 500);
         }
     }
 
     private void mp(MouseEvent e) {
-        x += 20;
-        y += 20;
+        // x += 20;
+        // y += 20;
         System.out.println(e.getX() + " " + e.getY());
     }
 
     private void kp(KeyEvent e) {
-        System.out.println(e.getKeyCode());
-        if (e.getKeyCode() == KeyEvent.VK_W) {
-            y -= 50;
-            System.out.println("W");
-        } else if (e.getKeyCode() == KeyEvent.VK_S) {
-            y += 50;
-            System.out.println("S");
+        if (e.getKeyCode() == KeyEvent.VK_UP) {
+            if (y != 0) {
+                y -= 50;
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            if (y != 450) {
+                y += 50;
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            if (x != 0) {
+                x -= 50;
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            if (x != 450) {
+                x += 50;
+            }
         }
     }
 
     public static void main(String args[]) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Test().setVisible(true);
+                new Arena().setVisible(true);
             }
         });
     }
